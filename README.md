@@ -10,6 +10,8 @@ In each folder, the structure is as follows:
     	- the main file that each instance denote a POI with corresponding information
 	- City_Region.geojson 
     	- the geojson file that collect all the regions as Polygons in the city
+	- City_BA.geojson 
+    	- the geojson file that collect all the business areas as Polygons in the city
 	- City_brands.pkl 
     	- the relation file that represent the relations between brands
 	- City_regions.pkl 
