@@ -28,5 +28,3 @@ Please use the python package Pandas and GeoPandas to load the file:
 The folder baseline contains the implementation code of the baselines.
 
 We also provide a demo data of Singapore using .csv format in folder demo.
-
-#### Please find more information from the WebSite https://OpenSiteRec.github.io/
