@@ -157,7 +157,7 @@ def test():
                 instances = torch.LongTensor(batch_users).to(args.device)
 
             ratings = model(instances)
-            ratings = ratings * dataset.lt_mask
+            # ratings = ratings * dataset.lt_mask
 
             # exclude_index = []
             # exclude_items = []

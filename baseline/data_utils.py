@@ -132,8 +132,9 @@ class OpenSiteRec(Dataset):
         for idx, row in self.test_data.iterrows():
             user, item = row[0], row[-1]
             td[user] = td.get(user, [])
-            if self.lt_mask[item] > 0:
-                td[user].append(item)
+            td[user].append(item)
+            # if self.lt_mask[item] > 0:
+            #     td[user].append(item)
         return td
 
     def __convert_sp_mat_to_sp_tensor(self, X):
@@ -175,13 +176,4 @@ class OpenSiteRec(Dataset):
 
     def __len__(self):
         return len(self.S)
-
-
-if __name__ == '__main__':
-    df = pd.read_pickle('../' + 'Tokyo' + '/' + 'Tokyo' + '_KG_plus.pkl')
-    bvc = df['Brand'].value_counts() >= 10
-    bvc = bvc[bvc > 0].index
-    df = df[df['Brand'].isin(bvc)]
-    df.reset_index(inplace=True, drop=True)
-    df.to_csv('Tokyo_KG_test2.csv')
 
